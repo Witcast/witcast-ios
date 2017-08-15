@@ -31,7 +31,6 @@ class PlayerViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     
     let realm = try! Realm()
-//    var sliderTimer: Timer?
     var isPlay = false;
     var lists : Results<NormalEpisode>!
     internal var titleTab: String = ""
@@ -99,7 +98,6 @@ class PlayerViewController: UIViewController {
         if (self.isPlay == true) {
             if let currentTime = self.appDelegate.jukebox.currentItem?.currentTime {
                 self.appDelegate.jukebox.seek(toSecond: Int(Double(currentTime) - 15))
-//                self.checkTime()
             }
         }
     }
@@ -108,7 +106,6 @@ class PlayerViewController: UIViewController {
         if (self.isPlay == true) {
             if let currentTime = self.appDelegate.jukebox.currentItem?.currentTime {
                 self.appDelegate.jukebox.seek(toSecond: Int(Double(currentTime) + 15))
-//                self.checkTime()
             }
         }
     }
@@ -246,10 +243,6 @@ class PlayerViewController: UIViewController {
                 
                 InitialData.downloadFile(indexEpisode: updateData.episodeId, url: dataTemp.fileUrl)
                 
-//                let announcement = Announcement(title: "Downloading", subtitle: "ตอนนี้กำลังดาวน์โหลดไฟล์จ้า อย่าพึ่งปิดแอพนะคะ สามารถตรวจสอบสถานะได้ที่เมนู Download", image: UIImage(named: "p-bun.png"))
-//                Whisper.show(shout: announcement, to: navigationController!, completion: {
-//                    print("The shout was silent.")
-//                })
             }
             else {
                 if dataDownload[0].downloadStatus == "None" {
