@@ -1,43 +1,47 @@
 PODS:
   - Alamofire (4.5.0)
-  - Firebase/Core (4.0.4):
-    - FirebaseAnalytics (= 4.0.2)
-    - FirebaseCore (= 4.0.4)
-  - Firebase/Database (4.0.4):
+  - Firebase/Core (4.1.0):
+    - FirebaseAnalytics (= 4.0.3)
+    - FirebaseCore (= 4.0.5)
+  - Firebase/Database (4.1.0):
     - Firebase/Core
-    - FirebaseDatabase (= 4.0.0)
-  - FirebaseAnalytics (4.0.2):
+    - FirebaseDatabase (= 4.0.1)
+  - FirebaseAnalytics (4.0.3):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (4.0.4):
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.5):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
-  - FirebaseDatabase (4.0.0):
+  - FirebaseDatabase (4.0.1):
     - FirebaseAnalytics (~> 4.0)
-  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
+  - FirebaseInstanceID (2.0.1):
     - FirebaseCore (~> 4.0)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - Jukebox (0.2.1)
-  - Kingfisher (3.10.4)
-  - MarqueeLabel/Swift (3.1.1)
-  - Material (2.8.1):
-    - Material/Core (= 2.8.1)
-  - Material/Core (2.8.1)
+  - Kingfisher (3.11.0)
+  - leveldb-library (1.18.3)
+  - MarqueeLabel/Swift (3.1.2)
+  - Material (2.9.4):
+    - Material/Core (= 2.9.4)
+  - Material/Core (2.9.4)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - PopupDialog (0.5.4)
-  - PullToRefreshKit (0.5.0)
-  - Realm (2.9.1):
-    - Realm/Headers (= 2.9.1)
-  - Realm/Headers (2.9.1)
-  - RealmSwift (2.9.1):
-    - Realm (= 2.9.1)
+  - PullToRefreshKit (0.6.0)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
   - SwiftyJSON (3.1.4)
   - Whisper (5.0.0)
   - WKAwesomeMenu (2.0.0)
@@ -65,21 +69,22 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
-  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
-  FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
-  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
-  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  Firebase: ebebf41db7f10e0c7668b6eaaa857fbe599aa478
+  FirebaseAnalytics: 76f754d37ca5b04f36856729b6af3ca0152d1069
+  FirebaseCore: 7d876ea97a830cbe62ba7fbbe7670c833a324ba0
+  FirebaseDatabase: 94c38c783d23dc6679441050772d42e801d06e9e
+  FirebaseInstanceID: 0500e3cb54a1a4e01a8cffcc09323b8bb8fc7e1e
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
-  Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
-  MarqueeLabel: 17c5148b6f7144498eff5e0d286bd2e7e866f972
-  Material: cc27757e6c91999ac41b2089769106a9d83364c0
+  Kingfisher: c8911a7672c6217dec8c0520fb6e76ec4b7e0780
+  leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
+  MarqueeLabel: fcd7057a779422d86589be759036f1510b08c6a0
+  Material: 06fa0a5f29c45c42608ae32f3be96f1c46558d13
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
-  PullToRefreshKit: 312f7ac3f24ce94eade91e43fb961038a256b835
-  Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
-  RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
+  PullToRefreshKit: 49f63861030a78eeab18d3fb8d338da845e6bc57
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
   WKAwesomeMenu: 39d888f93705f63baadd4d7bda8513250c43b7ed

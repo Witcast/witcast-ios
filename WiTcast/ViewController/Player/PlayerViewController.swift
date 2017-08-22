@@ -137,6 +137,8 @@ class PlayerViewController: UIViewController {
             }
         }
         else {
+            self.appDelegate.jukebox.stop();
+            
             if (UserDefaults.standard.object(forKey: "episodeShow") as? Int) != nil {
                 index = UserDefaults.standard.object(forKey: "episodeShow") as! Int;
             }
@@ -167,7 +169,7 @@ class PlayerViewController: UIViewController {
             else {
                 self.appDelegate.jukebox.append(item: JukeboxItem (URL: URL(string: data[0].fileUrl)!, localTitle: data[0].dsc), loadingAssets: true)
             }
-            
+
             self.appDelegate.jukebox.play(atIndex: 0)
         }
     }
@@ -244,10 +246,10 @@ class PlayerViewController: UIViewController {
                 
                 InitialData.downloadFile(indexEpisode: updateData.episodeId, url: dataTemp.fileUrl)
                 
-                let announcement = Announcement(title: "Downloading", subtitle: "ตอนนี้กำลังดาวน์โหลดไฟล์จ้า อย่าพึ่งปิดแอพนะคะ สามารถตรวจสอบสถานะได้ที่เมนู Download", image: UIImage(named: "p-bun.png"))
-                Whisper.show(shout: announcement, to: navigationController!, completion: {
-                    print("The shout was silent.")
-                })
+//                let announcement = Announcement(title: "Downloading", subtitle: "ตอนนี้กำลังดาวน์โหลดไฟล์จ้า อย่าพึ่งปิดแอพนะคะ สามารถตรวจสอบสถานะได้ที่เมนู Download", image: UIImage(named: "p-bun.png"))
+//                Whisper.show(shout: announcement, to: navigationController!, completion: {
+//                    print("The shout was silent.")
+//                })
             }
             else {
                 if dataDownload[0].downloadStatus == "None" {
@@ -273,6 +275,7 @@ class PlayerViewController: UIViewController {
             }
         }
         
+        self.downloadButton.tintColor = Color.red.base
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "update_feed"), object: nil)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "update_search"), object: nil)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateDownload"), object: nil)

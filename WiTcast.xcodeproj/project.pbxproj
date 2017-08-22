@@ -1528,8 +1528,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tanakorn Phoochaliaw (R5A7SY37T9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tanakorn Phoochaliaw (R5A7SY37T9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tanakorn Phoochaliaw (Q8PM9PJ7WS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanakorn Phoochaliaw (Q8PM9PJ7WS)";
 				DEVELOPMENT_TEAM = R5A7SY37T9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1540,8 +1540,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.witcastthailand.witapp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ce2edf59-c4cb-46b2-a7a7-eb6d61d56fd7";
-				PROVISIONING_PROFILE_SPECIFIER = WiTcast_Production;
+				PROVISIONING_PROFILE = "75227b9f-4b31-45e7-995a-4d621425bb6b";
+				PROVISIONING_PROFILE_SPECIFIER = WiTcast_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "WiTcast/Library/WiTcast-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1557,8 +1557,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tanakorn Phoochaliaw (R5A7SY37T9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tanakorn Phoochaliaw (R5A7SY37T9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tanakorn Phoochaliaw (Q8PM9PJ7WS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanakorn Phoochaliaw (Q8PM9PJ7WS)";
 				DEVELOPMENT_TEAM = R5A7SY37T9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1569,8 +1569,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.witcastthailand.witapp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ce2edf59-c4cb-46b2-a7a7-eb6d61d56fd7";
-				PROVISIONING_PROFILE_SPECIFIER = WiTcast_Production;
+				PROVISIONING_PROFILE = "75227b9f-4b31-45e7-995a-4d621425bb6b";
+				PROVISIONING_PROFILE_SPECIFIER = WiTcast_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "WiTcast/Library/WiTcast-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
