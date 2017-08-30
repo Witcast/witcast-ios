@@ -1,0 +1,90 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Firebase/Core (4.0.4):
+    - FirebaseAnalytics (= 4.0.2)
+    - FirebaseCore (= 4.0.4)
+  - Firebase/Database (4.0.4):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.0.0)
+  - FirebaseAnalytics (4.0.2):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.4):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseDatabase (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - Jukebox (0.2.1)
+  - Kingfisher (3.10.4)
+  - MarqueeLabel/Swift (3.1.1)
+  - Material (2.8.1):
+    - Material/Core (= 2.8.1)
+  - Material/Core (2.8.1)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - PopupDialog (0.5.4)
+  - PullToRefreshKit (0.5.0)
+  - Realm (2.9.1):
+    - Realm/Headers (= 2.9.1)
+  - Realm/Headers (2.9.1)
+  - RealmSwift (2.9.1):
+    - Realm (= 2.9.1)
+  - SwiftyJSON (3.1.4)
+  - Whisper (5.0.0)
+  - WKAwesomeMenu (2.0.0)
+  - XLActionController (3.0.1):
+    - XLActionController/Core (= 3.0.1)
+  - XLActionController/Core (3.0.1)
+  - XLActionController/Periscope (3.0.1):
+    - XLActionController/Core
+
+DEPENDENCIES:
+  - Alamofire
+  - Firebase/Database
+  - Jukebox
+  - Kingfisher
+  - MarqueeLabel/Swift
+  - Material
+  - PopupDialog
+  - PullToRefreshKit
+  - RealmSwift
+  - SwiftyJSON
+  - Whisper
+  - WKAwesomeMenu
+  - XLActionController
+  - XLActionController/Periscope
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
+  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
+  FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
+  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
+  Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
+  MarqueeLabel: 17c5148b6f7144498eff5e0d286bd2e7e866f972
+  Material: cc27757e6c91999ac41b2089769106a9d83364c0
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
+  PullToRefreshKit: 312f7ac3f24ce94eade91e43fb961038a256b835
+  Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
+  RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
+  WKAwesomeMenu: 39d888f93705f63baadd4d7bda8513250c43b7ed
+  XLActionController: 57fe0ce1642e2eed971b188b490762345fdbf963
+
+PODFILE CHECKSUM: 74746c4d9ff82c4bb5926d1fd7c26e586fff0b71
+
+COCOAPODS: 1.2.1

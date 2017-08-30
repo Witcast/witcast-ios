@@ -1,0 +1,270 @@
+{
+  "mainEpisodeList": [
+    {
+      "mainEpisodeId": 1,
+      "title": "Episode 01",
+      "dsc": "สงครามไข่ / แมงมุมแวมไพร์ / ปล่อยเต่า / นิวตริโน่ไวกว่าแสง?",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211089/GroupEpisode/ep1.png",
+      "subEpisodeCount": 1
+    },
+    {
+      "mainEpisodeId": 2,
+      "title": "Episode 02",
+      "dsc": "เพนดูลัม / ดราม่าป๋องแป๋ง / ความสกปรก / สมาคมอาบแดด / ป้าเกาหลีกับสเปิร์มปลาหมึก / เบร้อวกว่าแสง?",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211142/GroupEpisode/ep2.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 3,
+      "title": "Episode 03",
+      "dsc": "ไดโนเสาร์ขนฟู / สมองกับประสบการณ์ทางจิตวิญญาณ/ หลุมดำ/ ฮิกส์",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211143/GroupEpisode/ep3.png",
+      "subEpisodeCount": 1
+    },
+    {
+      "mainEpisodeId": 4,
+      "title": "Episode 04",
+      "dsc": "ซินเนสเตเซีย/ สัมภาษณ์น้องข้าวตู คนเห็นสีตัวจริง",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211146/GroupEpisode/ep4.png",
+      "subEpisodeCount": 1
+    },
+    {
+      "mainEpisodeId": 5,
+      "title": "Episode 05",
+      "dsc": "จดหมายคุณไวรัสไก่/ยารักษาตาบอด?/กราฟีน/ปลวกพลีชีพ/ สมองคนเล็กลง?",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211145/GroupEpisode/ep5.png",
+      "subEpisodeCount": 1
+    },
+    {
+      "mainEpisodeId": 6,
+      "title": "Episode 06",
+      "dsc": "ฉลองป๋องแป๋งได้เป็นแฟนพันธุ์แท้ / ความเข้าใจผิดเรื่องวิวัฒนาการ / เทศกาลลึงก์ภูฏาน / คิวริโอซิตี้ / รางวัลมิลเนอร์ / นักวิทย์ดีเด่นของไทย",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211147/GroupEpisode/ep6.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 7,
+      "title": "Episode 07",
+      "dsc": "ความเครียดส่งต่อผ่าน epigenetic / กาลเวลาคืออะไร / ชีววิทยาความกลัว",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211143/GroupEpisode/ep7.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 8,
+      "title": "Episode 08",
+      "dsc": "climate change / สนธิสัญญาสันติภาพฉบับแรก / ทำไมแสงดาวถึงกระพริบ? / สัมภาษณ์พี่ชิวชมรมคนรักมวลเมฆ / คุยกับพี่ชิวต่อเรื่องไอน์สไตน์",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211143/GroupEpisode/ep8.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 9,
+      "title": "Episode 09",
+      "dsc": "แมงมุมเพศเมียอุดรูตัวเอง / Ig Nobel/ ความมหัศจรรย์ของน้ำ/ รังนก /  ดราม่าเงินบริจาค",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211144/GroupEpisode/ep9.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 10,
+      "title": "Episode 10",
+      "dsc": "กินรก / เพชรรัสเซีย / apple-google-mathematica / ปรากฏการณ์ไคเมร่า 1 คน 2 DNA และเซลลูกที่ทะลุรกไปโตต่อในตัวแม่ / เทศกาลกินเจ / ฟิสิกส์ของการลุยไฟ / ธรรมชาติคน กินพืชหรือกินเนื้อ? / ปลูกเนื้อโดยไม่ต้องฆ่า",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211143/GroupEpisode/ep10.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 11,
+      "title": "Episode 11",
+      "dsc": "Live at อพวช. / power pose / พื้นที่ส่วนตัวของวาฬ / วัฒนธรรมโลมา / ดูดาว / ดาวหาง / ตอบจดหมาย",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211149/GroupEpisode/ep11.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 12,
+      "title": "Episode 12",
+      "dsc": "ดาวเคราะห์นอกระบบ / เสียงนีโม่ / ด้วงลึงค์หนาม / ทำไมกลางคืนถึงมืด? / โฆษณาเบร้อ / Post hoc fallacy และนกพิราบของ skinner",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211149/GroupEpisode/ep12.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 13,
+      "title": "Episode 13",
+      "dsc": "ดราม่าป๋องแป๋ง แฟนพันธุ์แท้ / ความฝันของอาบัน / ดาวเคราะห์พเนจร / วิวัฒนาการ บังเอิญไม่บังเอิญ / ลำดับฟิโบนัชชีและสัดส่วนทองคำ / สัมภาษณ์พี่ยอ / ฟิสิกส์ของการย้อนเวลา / ฟิสิกส์เบร้อในหนัง",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211159/GroupEpisode/ep13.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 14,
+      "title": "Episode 14",
+      "dsc": "อาบันฝันต่อ / การปรับตัวของสัตว์ในเมือง / Standard Model / ยาสีฟันช้าง",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211150/GroupEpisode/ep14.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 15,
+      "title": "Episode 15",
+      "dsc": "TOP 10 OF 2012 / วิทย์ฐาน เทอร์โมไดนามิกส์ / ตำนานมาเก๊า / รูเล็ต / ความน่าจะเป็น",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211151/GroupEpisode/ep15.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 16,
+      "title": "Episode 16",
+      "dsc": "ด้วงขี้ทางช้างเผือก / ดาวหางแพนสตาร์ / เซฟไฟล์ใส่ DNA / ว่าด้วยเรื่องหวานๆ",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211154/GroupEpisode/ep16.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 17,
+      "title": "Episode 17",
+      "dsc": "อุกกาบาต SPECIAL / มะเร็งกับวิวัฒนาการ / แขกรับเชิญ – พี่เอ้ว ชัชพล / คุยกับพี่เอ้วเรื่องการเขียนและการขาย",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211152/GroupEpisode/ep17.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 18,
+      "title": "Episode 18",
+      "dsc": "ป๋องแป๋งบุกสิงคโปร์ / ปิดคดี GT200 / พืชคุยกัน / นมอาบัน",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211154/GroupEpisode/ep18.png",
+      "subEpisodeCount": 1
+    },
+    {
+      "mainEpisodeId": 19,
+      "title": "Episode 19",
+      "dsc": "ปป.เล่าดราม่าหัวใจ / อิ่มแล้วจาม / ทำไมโลกหมุน / สีไข่ / ยุงกับเอดส์ / สัตว์เป็นปัญญาอ่อนได้มั้ย",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211155/GroupEpisode/ep19.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 20,
+      "title": "Episode 20",
+      "dsc": "ความตายคืออะไร? แขกรับเชิญอาจารย์ลูกแก้วและพี่เอ้ว / ไวรัสซอมบี้",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211154/GroupEpisode/ep20.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 21,
+      "title": "Episode 21",
+      "dsc": "รีวิว GRAVITY / ฟิสิกส์ไร้แรงโน้มถ่วง / โครงการกระสวยอวกาศ / เที่ยวบินไร้น้ำหนัก / ยุคใหม่แห่งการสำรวจอวกาศ /  ชีวิตประจำวันในอวกาศ",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211155/GroupEpisode/ep21.png",
+      "subEpisodeCount": 5
+    },
+    {
+      "mainEpisodeId": 22,
+      "title": "Episode 22",
+      "dsc": "ครบองค์ 3 / ย้อนดูข่าวเด่นปี 2013 / Voyager 1 / ข่าวดาราศาสตร์อื่นๆ / สปีซีส์ใหม่ / ป๋องแป๋ง free will และ quantum",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211157/GroupEpisode/ep22.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 23,
+      "title": "Episode 23",
+      "dsc": "ริ้วรอยคลื่นความโน้มถ่วงบนแสงไมโครเวฟดึกดำบรรพ์ หลักฐานยืนยันทฤษฎี inflation / โลกควอนตัม/แมวโชรดิงเจอร์",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211157/GroupEpisode/ep23.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 24,
+      "title": "Episode 24",
+      "dsc": "นั่งชิลบ้านป๋องแป๋ง/ ข่าวสั้นมากมาย",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211157/GroupEpisode/ep24.png",
+      "subEpisodeCount": 1
+    },
+    {
+      "mainEpisodeId": 25,
+      "title": "Episode 25",
+      "dsc": "แพนด้าอุมามิ / การรับรสในสัตว์ต่างๆ / น้ำมหาศาลที่อยู่ในผลึกแร่ใต้โลก / การใช้ quantum entanglement ตั้งเวลานาฬิกาอะตอมให้ตรงกันทั่วโลก / อาบันเล่าเรื่องช่วยจับหมาที่สุสานแต้จิ๋ว / ปป.เล่าเรื่องลาว",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211158/GroupEpisode/ep25.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 26,
+      "title": "Episode 26",
+      "dsc": "ต้อนรับน้องเปตองจากเกาหลี / ภาพหลอนที่เกิดช่วงพรมแดนระหว่างหลับกับตื่น / Sleep paralysis ปรากฏการณ์ผีอำ / คำอธิบายทางสมอง",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211158/GroupEpisode/ep26.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 27,
+      "title": "Episode 27",
+      "dsc": "Nobel vs. Ig Nobel 2014 / รีวิวและอธิบายวิทยาศาสตร์หนัง Interstellar",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211167/GroupEpisode/ep27.png",
+      "subEpisodeCount": 5
+    },
+    {
+      "mainEpisodeId": 28,
+      "title": "Episode 28",
+      "dsc": "อาาาาาา สิเป้ง ยาาาาาา ตีสิสเสร็จแล้ว!/ เฮฮาวาเลนไทน์กับอาบัน / คุยชีวิต Alan Turing และหนัง The Imitation Game กับป๋องแป๋ง",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211159/GroupEpisode/ep28.png",
+      "subEpisodeCount": 1
+    },
+    {
+      "mainEpisodeId": 29,
+      "title": "Episode 29",
+      "dsc": "บะ บะ บะ แบ็ค ทู เบสิกส์!!!! / ดราม่าป๋องแป๋ง ภาคโปรดสัตว์ / WiT News #1 ค้นพบกรามโบราณ เผยกำเนิดมนุษยชาติ / WiT News #2 วาฬวัยทอง / ป๋องแป๋งเล่า “การทำแผนที่โลก สุขภาพนักบินอวกาศ การชั่งน้ำหนักแบ็คทีเรีย” เกี่ยวข้องกันอย่างไร? + แถมนิทานเวตาล",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211163/GroupEpisode/ep29.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 30,
+      "title": "Episode 30",
+      "dsc": "เล่าตำนานการล่าไมค์+มิกซ์เซอร์ใหม่ / บุกคนตัวอย่าง / วิทย์ฐาน String Theory / เวตาลวันละตอน",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211168/GroupEpisode/ep30.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 31,
+      "title": "Episode 31",
+      "dsc": "พืชมงคล Special / 3 เหตุการณ์สำคัญแห่งประวัติศาสตร์วิวัฒนาการพืช / Cosmetic cast ตอนปป.กู้หน้า / String theory ภาคจบ / เวตาลวันละตอน ภาคเทพีสมุทร",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211164/GroupEpisode/ep31.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 32,
+      "title": "Episode 32",
+      "dsc": "Tie-in หนัง Jurassic World/ พูดคัยกับอาจารย์ป้อง ดร.สุรเวช สุธีธร / ขั้นตอนการขุดฟอสซิล /หลักการเกิดฟอสซิล/ ฟอสซิลกับวัดและความเชื่อในไทย",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211165/GroupEpisode/ep32.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 33,
+      "title": "Episode 33",
+      "dsc": "Happy Birthday WiTcast ครบ 3 ปี / WiT WiT WiT… Update / อ่านคำอวยพรวันเกิดจากแฟนๆ / ปริศนาหม้อข้าวหม้อแกงลิง พร้อมปริศนาใหม่/ ตบท้ายด้วยนิทานชาดกหลังอาหารโดยป๋องแป๋ง",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211163/GroupEpisode/ep33.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 34,
+      "title": "Episode 34",
+      "dsc": "ลึงค์สเปเชียล!!! Fantastic Phallus, Dick for Dad !!!",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211170/GroupEpisode/ep34.png",
+      "subEpisodeCount": 2
+    },
+    {
+      "mainEpisodeId": 35,
+      "title": "Episode 35",
+      "dsc": "NASA ประกาศข่าวพบน้ำเหลวไหลบนดาวอังคาร / วิทย์ฐาน ป๋องแป๋งเล่าประวัติการค้นพบแม่เหล็กไฟฟ้า / มอบ Totem ให้ป๋องแป๋ง / เปิดเบียร์ลาว / รีวิวหนังที่ผ่านมาของปี 2015 / รีวิวหนัง The Martian",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211167/GroupEpisode/ep35.png",
+      "subEpisodeCount": 4
+    },
+    {
+      "mainEpisodeId": 36,
+      "title": "Episode 36",
+      "dsc": "โปรโมทรายการ Breakthrough ช่อง National Geographic / ข้าวตูเจ้าหนูฝึกงาน / คุณแม็ค แฟนพันธุ์แท้ สตีฟ จ็อบส์ / ดราม่าป๋องแป๋ง ภาคฝนทะเลทราย / วิทย์ฐาน ป๋องแป๋งเล่าประวัติการค้นพบแม่เหล็กไฟฟ้าต่อ / คุณ MAC เล่าประวัติ Steve Jobs และวิวัฒนาการคอมพิวเตอร์",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211167/GroupEpisode/ep36.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 37,
+      "title": "Episode 37",
+      "dsc": "Nobel vs Ig Nobel 2015",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211169/GroupEpisode/ep37.png",
+      "subEpisodeCount": 3
+    },
+    {
+      "mainEpisodeId": 38,
+      "title": "Episode 38",
+      "dsc": "นิยาม GMO / ทัศนคติด้านลบ และความเข้าใจผิดต่างๆ / เครื่องมือการสู้กันระหว่างผลประโยชน์ทางการค้า / ความเข้าใจผิดที่ว่าอาหารออร์แกนนิกปลอดภัยและมีคุณค่าทางอาหารมากกว่าอาหารปกติ / มองโลกอนาคต / อธิบาย Gene editing เทคโนโลยีใหม่มาแรงที่กำลังจะเปลี่ยนแปลงโลก / CRISPR Cas9",
+      "imageUrl": "http://res.cloudinary.com/dmah7hexe/image/upload/v1470211169/GroupEpisode/ep38.png",
+      "subEpisodeCount": 1
+    }
+  ]
+}
