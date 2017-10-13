@@ -102,11 +102,7 @@ class ContainerViewController: UIViewController {
         let feedController  = FeedViewController(nibName:"FeedViewController",bundle:nil);
         let feedNavi = FeedToolbarController(rootViewController: feedController);
         activeViewController = feedNavi
-        
-        self.controllerVC = PlayerViewController(nibName: "PlayerViewController", bundle: nil)
-        self.detailVC = PlayerDetailViewController(nibName: "PlayerDetailViewController", bundle: nil)
-        self.controllerVC.initView(titleTab: "Controller")
-        self.detailVC.initView(titleTab: "Detail")
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -171,6 +167,12 @@ class ContainerViewController: UIViewController {
     }
     
     func playView(_ notification: NSNotification){
+
+        self.controllerVC = PlayerViewController(nibName: "PlayerViewController", bundle: nil)
+        self.detailVC = PlayerDetailViewController(nibName: "PlayerDetailViewController", bundle: nil)
+        self.controllerVC.initView(titleTab: "Controller")
+        self.detailVC.initView(titleTab: "Detail")
+
         self.controllerVC.isPlay = false;
         self.detailVC.isPlay = false;
         
@@ -278,6 +280,10 @@ class ContainerViewController: UIViewController {
     }
     
     @IBAction func tapMiniPlayerButton(_ sender: AnyObject) {
+        self.controllerVC = PlayerViewController(nibName: "PlayerViewController", bundle: nil)
+        self.detailVC = PlayerDetailViewController(nibName: "PlayerDetailViewController", bundle: nil)
+        self.controllerVC.initView(titleTab: "Controller")
+        self.detailVC.initView(titleTab: "Detail")
         self.controllerVC.isPlay = true;
         self.detailVC.isPlay = true;
         

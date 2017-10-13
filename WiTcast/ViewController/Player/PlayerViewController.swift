@@ -33,32 +33,29 @@ class PlayerViewController: UIViewController {
     let realm = try! Realm()
     var isPlay = false;
     var lists : Results<NormalEpisode>!
-    internal var titleTab: String = ""
-    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate;
+    fileprivate var titleTab: String = ""
+    let appDelegate: AppDelegate = AppDelegate.shared()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(PlayerViewController.updateTimeLabel(_:)),name:NSNotification.Name(rawValue: "updateTime"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(PlayerViewController.updateStage(_:)),name:NSNotification.Name(rawValue: "updateStageMain"), object: nil)
         
+        configureView()
+        self.loadData()
+    }
+
+    func configureView() {
         slider.setThumbImage(UIImage(named: "sliderThumb"), for: UIControlState())
         slider.minimumTrackTintColor = UIColor.black
         slider.maximumTrackTintColor = UIColor.gray
-        
+
         self.favouriteButton.image = Icon.favorite
         self.downloadButton.image = Icon.arrowDownward
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UIApplication.shared.isStatusBarHidden = true;
         self.resetUI()
-        self.loadData()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -140,12 +137,10 @@ class PlayerViewController: UIViewController {
                     let documentsDirectoryURL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
                     let destinationUrl = documentsDirectoryURL.appendingPathComponent("\(dataLocal[0].episodeId).mp3")
                     self.appDelegate.jukebox.append(item: JukeboxItem (URL: destinationUrl, localTitle: data[0].dsc), loadingAssets: true)
-                }
-                else {
+                } else {
                     self.appDelegate.jukebox.append(item: JukeboxItem (URL: URL(string: data[0].fileUrl)!, localTitle: data[0].dsc), loadingAssets: true)
                 }
-            }
-            else {
+            } else {
                 self.appDelegate.jukebox.append(item: JukeboxItem (URL: URL(string: data[0].fileUrl)!, localTitle: data[0].dsc), loadingAssets: true)
             }
 
@@ -165,8 +160,7 @@ class PlayerViewController: UIViewController {
             updateData.downloadPath = ""
             updateData.downloadPercent = 0
             updateData.lastDulation = 0.0
-        }
-        else {
+        } else {
             updateData.episodeId = dataFavourite[0].episodeId
             updateData.downloadStatus = dataFavourite[0].downloadStatus
             updateData.downloadPath = dataFavourite[0].downloadPath
@@ -202,8 +196,7 @@ class PlayerViewController: UIViewController {
             
             popup.addButtons([buttonOK])
             self.present(popup, animated: true, completion: nil)
-        }
-        else {
+        } else {
             let downloadNow = UserDefaults.standard.integer(forKey: "downloadCount")
             UserDefaults.standard.set((downloadNow + 1), forKey: "downloadCount")
             
@@ -225,8 +218,7 @@ class PlayerViewController: UIViewController {
                 
                 InitialData.downloadFile(indexEpisode: updateData.episodeId, url: dataTemp.fileUrl)
                 
-            }
-            else {
+            } else {
                 if dataDownload[0].downloadStatus == "None" {
                     let updateData = ItemLocal()
                     updateData.episodeId = dataDownload[0].episodeId
@@ -261,28 +253,23 @@ class PlayerViewController: UIViewController {
     }
     
     func updateTimeLabel(_ notification: NSNotification){
-        if (self.isPlay == true) {
-            let notiInfo = notification.object as! NSDictionary
-            if notiInfo["status"] as! Bool == true {
-                let currentTime = notiInfo["timeNow"] as! Double
-                let duration = notiInfo["duration"] as! Double
-                
-                let value = Float(currentTime / duration)
-                self.slider.isEnabled = true
-                self.slider.value = value
-                self.lblTime.text = "\(self.timeLabelString(duration: Int(currentTime))) / \(self.timeLabelString(duration: Int(duration)))"
-            }
-            else {
+        guard let notiInfo = notification.object as? NSDictionary,
+            let status = notiInfo["status"] as? Bool,
+            let currentTime = notiInfo["timeNow"] as? Double,
+            let duration = notiInfo["duration"] as? Double,
+            self.isPlay && status else {
                 self.resetUI()
-            }
+                return
         }
-        else {
-            self.resetUI()
-        }
+
+        let value = Float(currentTime / duration)
+        self.slider.isEnabled = true
+        self.slider.value = value
+        self.lblTime.text = "\(self.timeLabelString(duration: Int(currentTime))) / \(self.timeLabelString(duration: Int(duration)))"
+
     }
     
-    func resetUI()
-    {
+    func resetUI() {
         self.lblTime.text = "0:00 / 0:00"
         self.slider.value = 0
         self.loadingIndicator.alpha = 0
@@ -291,29 +278,26 @@ class PlayerViewController: UIViewController {
     }
     
     func updateUI(){
-        if (self.isPlay == true) {
-            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+        if (self.isPlay) {
+            UIView.animate(withDuration: 0.3) {
                 self.loadingIndicator.alpha = self.appDelegate.jukebox.state == .loading ? 1 : 0
                 self.btnPlaylbl.alpha = self.appDelegate.jukebox.state == .loading ? 0 : 1
                 self.btnPlaylbl.isEnabled = self.appDelegate.jukebox.state == .loading ? false : true
-            })
-            
-            if self.appDelegate.jukebox.state == .ready {
-                self.btnPlaylbl.setImage(UIImage(named: "ic-play"), for: UIControlState())
-            } else if self.appDelegate.jukebox.state == .loading  {
-                self.btnPlaylbl.setImage(UIImage(named: "ic-pause"), for: UIControlState())
-            } else {
-                let imageName: String
-                switch self.appDelegate.jukebox.state {
-                case .playing, .loading:
-                    imageName = "ic-pause"
-                case .paused, .failed, .ready:
-                    imageName = "ic-play"
-                }
-                self.btnPlaylbl.setImage(UIImage(named: imageName), for: UIControlState())
             }
-        }
-        else {
+
+            let imageName: String
+            switch self.appDelegate.jukebox.state {
+            case .ready:
+                imageName = "ic-play"
+            case .loading:
+                imageName = "ic-pause"
+            case .playing:
+                imageName = "ic-pause"
+            case .paused, .failed:
+                imageName = "ic-play"
+            }
+            self.btnPlaylbl.setImage(UIImage(named: imageName), for: UIControlState())
+        } else {
             self.btnPlaylbl.setImage(UIImage(named: "ic-play"), for: .normal)
         }
     }
@@ -360,11 +344,14 @@ class PlayerViewController: UIViewController {
         }
         
         self.lists = realm.objects(NormalEpisode.self).filter("episodeId = \(index)")
-        self.lblTitle.text = self.lists[0].title;
-        self.lblDetail.text = self.lists[0].dsc;
-        
-        let URLString = self.lists[0].coverImageUrl;
-        let url = URL(string: URLString)!
+        self.lblTitle.text = self.lists.first?.title;
+        self.lblDetail.text = self.lists.first?.dsc;
+
+        guard
+            let URLString = self.lists.first?.coverImageUrl,
+            let url = URL(string: URLString) else {
+            return
+        }
         self.imgCover.kf.setImage(with: url)
         
         let dataLocal = realm.objects(ItemLocal.self).filter("episodeId = \(self.lists[0].episodeId)")
@@ -394,7 +381,7 @@ class PlayerViewController: UIViewController {
 
 /// PageTabBar.
 extension PlayerViewController {
-    internal func preparePageTabBarItem() {
+    func preparePageTabBarItem() {
         tabItem.title = self.titleTab
         tabItem.titleColor = .black
         tabItem.titleLabel?.font = UIFont(name: font_header_regular, size: 20);
