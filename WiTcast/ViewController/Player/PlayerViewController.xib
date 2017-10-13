@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,95 +31,122 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ep0_c.png" id="8Sm-3O-xCw">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ep0_c.png" translatesAutoresizingMaskIntoConstraints="NO" id="gld-2j-66a">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="155" id="Qiv-t0-SBW"/>
+                    </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ep0_c.png" id="gld-2j-66a">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <view contentMode="scaleToFill" misplaced="YES" id="2YE-KT-2KN">
-                    <rect key="frame" x="0.0" y="203" width="320" height="366"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YE-KT-2KN">
+                    <rect key="frame" x="0.0" y="155" width="320" height="413"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mjt-FN-zFT">
-                            <rect key="frame" x="64" y="148" width="50" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="ic-rewind.png"/>
-                            <connections>
-                                <action selector="btnRewind:" destination="-1" eventType="touchUpInside" id="kIX-DS-IqO"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MxB-Y1-RN9">
-                            <rect key="frame" x="135" y="148" width="50" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="ic-play.png"/>
-                            <connections>
-                                <action selector="btnPlay:" destination="-1" eventType="touchUpInside" id="AUB-sO-hUS"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gt4-aC-Rje">
-                            <rect key="frame" x="206" y="148" width="50" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="ic-forward.png"/>
-                            <connections>
-                                <action selector="btnForward:" destination="-1" eventType="touchUpInside" id="TDV-4l-MFw"/>
-                            </connections>
-                        </button>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="white" id="dZ9-mk-jXz">
-                            <rect key="frame" x="135" y="145" width="50" height="56"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-xg-G4g">
+                            <rect key="frame" x="8" y="109" width="304" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjt-FN-zFT">
+                                    <rect key="frame" x="0.0" y="0.0" width="91" height="60"/>
+                                    <state key="normal" image="ic-rewind.png"/>
+                                    <connections>
+                                        <action selector="btnRewind:" destination="-1" eventType="touchUpInside" id="kIX-DS-IqO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxB-Y1-RN9">
+                                    <rect key="frame" x="107" y="0.0" width="91" height="60"/>
+                                    <state key="normal" image="ic-play.png"/>
+                                    <connections>
+                                        <action selector="btnPlay:" destination="-1" eventType="touchUpInside" id="AUB-sO-hUS"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt4-aC-Rje">
+                                    <rect key="frame" x="214" y="0.0" width="90" height="60"/>
+                                    <state key="normal" image="ic-forward.png"/>
+                                    <connections>
+                                        <action selector="btnForward:" destination="-1" eventType="touchUpInside" id="TDV-4l-MFw"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="dZ9-mk-jXz">
+                            <rect key="frame" x="150" y="129" width="20" height="20"/>
                             <color key="color" red="0.16129434109999999" green="0.1719003469" blue="0.21187774840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </activityIndicatorView>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w34-hj-Zpf" customClass="IconButton" customModule="Material">
-                            <rect key="frame" x="275" y="25" width="35" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="downloadButtonAction:" destination="-1" eventType="touchUpInside" id="3BN-q2-m5r"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="agI-Fb-LKN" customClass="IconButton" customModule="Material">
-                            <rect key="frame" x="237" y="25" width="35" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="favouriteButtonAction:" destination="-1" eventType="touchUpInside" id="vpu-tb-YrF"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Episode 1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pYj-rg-Ewn">
-                            <rect key="frame" x="11" y="25" width="223" height="35"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode 1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-rg-Ewn">
+                            <rect key="frame" x="16" y="16" width="143" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="สงครามไข่ / แมงมุมแวมไพร์ / ปล่อยเต่า / นิวตริโน่ไวกว่าแสง?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JLJ-va-9sH" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                            <rect key="frame" x="11" y="79" width="299" height="25"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00 / 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vj8-Fw-iJd">
-                            <rect key="frame" x="8" y="275" width="304" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 / 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj8-Fw-iJd">
+                            <rect key="frame" x="8" y="279" width="304" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <color key="textColor" red="0.16129434108734131" green="0.17190034687519073" blue="0.21187774837017059" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="T3A-AD-1mI">
-                            <rect key="frame" x="42" y="224" width="234" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T3A-AD-1mI">
+                            <rect key="frame" x="42" y="185" width="236" height="31"/>
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="progressSliderValueChanged" destination="-1" eventType="valueChanged" id="ezN-p4-oSG"/>
                             </connections>
                         </slider>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="สงครามไข่ / แมงมุมแวมไพร์ / ปล่อยเต่า / นิวตริโน่ไวกว่าแสง?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLJ-va-9sH" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                            <rect key="frame" x="8" y="76" width="304" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yPF-qN-0z5">
+                            <rect key="frame" x="244" y="17" width="68" height="34"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agI-Fb-LKN" customClass="IconButton" customModule="Material">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                    <connections>
+                                        <action selector="favouriteButtonAction:" destination="-1" eventType="touchUpInside" id="vpu-tb-YrF"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w34-hj-Zpf" customClass="IconButton" customModule="Material">
+                                    <rect key="frame" x="38" y="0.0" width="30" height="34"/>
+                                    <connections>
+                                        <action selector="downloadButtonAction:" destination="-1" eventType="touchUpInside" id="3BN-q2-m5r"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="JLJ-va-9sH" firstAttribute="leading" secondItem="2YE-KT-2KN" secondAttribute="leading" constant="8" id="039-HY-MZ3"/>
+                        <constraint firstItem="T3A-AD-1mI" firstAttribute="centerX" secondItem="2YE-KT-2KN" secondAttribute="centerX" id="30e-1w-96D"/>
+                        <constraint firstAttribute="trailing" secondItem="yPF-qN-0z5" secondAttribute="trailing" constant="8" id="5Lr-dS-ml1"/>
+                        <constraint firstItem="JLJ-va-9sH" firstAttribute="top" secondItem="pYj-rg-Ewn" secondAttribute="bottom" constant="24" id="CeO-5F-Ebl"/>
+                        <constraint firstAttribute="trailing" secondItem="Dbw-xg-G4g" secondAttribute="trailing" constant="8" id="HtV-Ng-eKj"/>
+                        <constraint firstItem="Vj8-Fw-iJd" firstAttribute="leading" secondItem="2YE-KT-2KN" secondAttribute="leading" constant="8" id="JJm-n6-Pj9"/>
+                        <constraint firstAttribute="trailing" secondItem="T3A-AD-1mI" secondAttribute="trailing" constant="44" id="Pd8-6E-9lG"/>
+                        <constraint firstItem="T3A-AD-1mI" firstAttribute="top" secondItem="Dbw-xg-G4g" secondAttribute="bottom" constant="16" id="aaP-RR-U4c"/>
+                        <constraint firstItem="Dbw-xg-G4g" firstAttribute="leading" secondItem="2YE-KT-2KN" secondAttribute="leading" constant="8" id="euy-7x-vtM"/>
+                        <constraint firstItem="Vj8-Fw-iJd" firstAttribute="top" secondItem="T3A-AD-1mI" secondAttribute="bottom" constant="64" id="hF3-FH-zty"/>
+                        <constraint firstItem="pYj-rg-Ewn" firstAttribute="top" secondItem="2YE-KT-2KN" secondAttribute="top" constant="16" id="iJ0-5z-I2C"/>
+                        <constraint firstItem="pYj-rg-Ewn" firstAttribute="leading" secondItem="2YE-KT-2KN" secondAttribute="leading" constant="16" id="og8-BL-o4c"/>
+                        <constraint firstAttribute="trailing" secondItem="Vj8-Fw-iJd" secondAttribute="trailing" constant="8" id="p2c-B3-Bbr"/>
+                        <constraint firstItem="Dbw-xg-G4g" firstAttribute="top" secondItem="JLJ-va-9sH" secondAttribute="bottom" constant="16" id="qZc-ES-S2E"/>
+                        <constraint firstItem="yPF-qN-0z5" firstAttribute="centerY" secondItem="pYj-rg-Ewn" secondAttribute="centerY" id="smk-rT-ZGG"/>
+                        <constraint firstItem="T3A-AD-1mI" firstAttribute="leading" secondItem="2YE-KT-2KN" secondAttribute="leading" constant="44" id="uq6-ux-Vi9"/>
+                        <constraint firstItem="dZ9-mk-jXz" firstAttribute="centerY" secondItem="MxB-Y1-RN9" secondAttribute="centerY" id="vLj-IO-Gjb"/>
+                        <constraint firstAttribute="trailing" secondItem="JLJ-va-9sH" secondAttribute="trailing" constant="8" id="zCx-wI-c1S"/>
+                        <constraint firstItem="dZ9-mk-jXz" firstAttribute="centerX" secondItem="MxB-Y1-RN9" secondAttribute="centerX" id="zt4-lY-s3R"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2YE-KT-2KN" secondAttribute="trailing" id="1wm-ke-mrt"/>
+                <constraint firstItem="2YE-KT-2KN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bnc-m3-lB5"/>
+                <constraint firstItem="gld-2j-66a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E6c-Vn-xvP"/>
+                <constraint firstAttribute="bottom" secondItem="2YE-KT-2KN" secondAttribute="bottom" id="OHv-zg-RlK"/>
+                <constraint firstAttribute="trailing" secondItem="gld-2j-66a" secondAttribute="trailing" id="R6F-MM-hLP"/>
+                <constraint firstItem="2YE-KT-2KN" firstAttribute="top" secondItem="gld-2j-66a" secondAttribute="bottom" id="Vrh-bs-brn"/>
+                <constraint firstItem="gld-2j-66a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qad-Sf-GBe"/>
+            </constraints>
             <point key="canvasLocation" x="305" y="383"/>
         </view>
     </objects>
@@ -128,9 +156,4 @@
         <image name="ic-play.png" width="60" height="60"/>
         <image name="ic-rewind.png" width="34" height="36"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

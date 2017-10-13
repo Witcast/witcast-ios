@@ -43,35 +43,12 @@ class PlayerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(PlayerViewController.updateTimeLabel(_:)),name:NSNotification.Name(rawValue: "updateTime"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(PlayerViewController.updateStage(_:)),name:NSNotification.Name(rawValue: "updateStageMain"), object: nil)
         
-        self.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.height - 138))
-        
-        if UIScreen.main.bounds.width == 414 {
-            self.viewTitle.frame = CGRect(x: self.imgCover.frame.origin.x, y: (self.imgCover.frame.origin.y + self.imgCover.frame.height), width: 414, height: self.viewTitle.frame.height);
-        }
-        else if UIScreen.main.bounds.width == 375 {
-            self.viewTitle.frame = CGRect(x: self.imgCover.frame.origin.x, y: (self.imgCover.frame.origin.y + self.imgCover.frame.height), width: 375, height: self.viewTitle.frame.height);
-        }
-        
-        self.lblTitle.font = UIFont(name: font_header_regular, size: self.lblTitle.font.pointSize);
-        self.lblTime.font = UIFont(name: font_header_regular, size: self.lblTime.font.pointSize);
-        self.lblDetail.font = UIFont(name: font_regular, size: self.lblDetail.font.pointSize);
-        self.lblDetail.tag = 101
-        self.lblDetail.type = .continuous
-        self.lblDetail.animationCurve = .easeInOut
-        self.lblDetail.speed = .duration(12.0)
-        self.lblDetail.fadeLength = 15.0
-        
         slider.setThumbImage(UIImage(named: "sliderThumb"), for: UIControlState())
         slider.minimumTrackTintColor = UIColor.black
         slider.maximumTrackTintColor = UIColor.gray
         
         self.favouriteButton.image = Icon.favorite
         self.downloadButton.image = Icon.arrowDownward
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,6 +64,16 @@ class PlayerViewController: UIViewController {
         
         UIApplication.shared.isStatusBarHidden = false;
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateButton"), object: nil)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    deinit {
+
+        print("printtttt")
     }
     
     func initView(titleTab: String) {

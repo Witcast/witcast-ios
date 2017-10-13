@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0E01609520DD6D9B48B8D30F /* Pods_WiTcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94DB36F1199FFE878172CCB /* Pods_WiTcast.framework */; };
+		B07635031F90949200761146 /* GoogleService-Info-BETA.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07635001F90949100761146 /* GoogleService-Info-BETA.plist */; };
+		B07635041F90949200761146 /* GoogleService-Info-MAIN.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07635011F90949200761146 /* GoogleService-Info-MAIN.plist */; };
+		B07635051F90949200761146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07635021F90949200761146 /* GoogleService-Info.plist */; };
 		B7096EC91D472B55004CEA84 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7096EC71D472B55004CEA84 /* OtherViewController.swift */; };
 		B7096ECA1D472B55004CEA84 /* OtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7096EC81D472B55004CEA84 /* OtherViewController.xib */; };
 		B7096ECD1D472C1B004CEA84 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7096ECB1D472C1B004CEA84 /* OtherTableViewCell.swift */; };
@@ -234,7 +237,6 @@
 		B7F60A531E84D93F00C86E74 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F60A521E84D93F00C86E74 /* SearchTableViewCell.swift */; };
 		B7FACE8D1F364A2B00299707 /* ItemLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FACE8C1F364A2B00299707 /* ItemLocal.swift */; };
 		B7FACE8F1F375C3D00299707 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FACE8E1F375C3D00299707 /* Reachability.swift */; };
-		B7FF59601E544ED00065A48E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7FF595F1E544ED00065A48E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +265,9 @@
 /* Begin PBXFileReference section */
 		071D9BA71DCC3FB7B4C07DEC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C36D0F026C557AD15FFD674 /* Pods-WiTcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiTcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiTcast/Pods-WiTcast.release.xcconfig"; sourceTree = "<group>"; };
+		B07635001F90949100761146 /* GoogleService-Info-BETA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-BETA.plist"; sourceTree = "<group>"; };
+		B07635011F90949200761146 /* GoogleService-Info-MAIN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-MAIN.plist"; sourceTree = "<group>"; };
+		B07635021F90949200761146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7096EC71D472B55004CEA84 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		B7096EC81D472B55004CEA84 /* OtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherViewController.xib; sourceTree = "<group>"; };
 		B7096ECB1D472C1B004CEA84 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -500,7 +505,6 @@
 		B7F60A521E84D93F00C86E74 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B7FACE8C1F364A2B00299707 /* ItemLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemLocal.swift; sourceTree = "<group>"; };
 		B7FACE8E1F375C3D00299707 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		B7FF595F1E544ED00065A48E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B94DB36F1199FFE878172CCB /* Pods_WiTcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiTcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF50936A402BBAF3C775B121 /* Pods-WiTcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiTcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiTcast/Pods-WiTcast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -922,6 +926,9 @@
 		B793C1ED1C7B73E6006BCC78 /* WiTcast */ = {
 			isa = PBXGroup;
 			children = (
+				B07635001F90949100761146 /* GoogleService-Info-BETA.plist */,
+				B07635011F90949200761146 /* GoogleService-Info-MAIN.plist */,
+				B07635021F90949200761146 /* GoogleService-Info.plist */,
 				B793C1EE1C7B73E6006BCC78 /* AppDelegate.swift */,
 				B7B6CD3A1C7B7A5E00C02A9B /* ViewController */,
 				B721CD141C7CA8AB00DF20D7 /* Library */,
@@ -929,7 +936,6 @@
 				B721CDAB1C7CBE9400DF20D7 /* Font */,
 				B793C1F51C7B73E6006BCC78 /* Assets.xcassets */,
 				B793C1FA1C7B73E6006BCC78 /* Info.plist */,
-				B7FF595F1E544ED00065A48E /* GoogleService-Info.plist */,
 				B7985BF51D91A07D007F3EF8 /* Model */,
 				B7985BF21D919B6D007F3EF8 /* Json */,
 			);
@@ -1158,13 +1164,13 @@
 				B75844931D9D834E0045D926 /* ic-download_touch@3x.png in Resources */,
 				B7615FB81D9F5BB600CA893E /* download@3x.png in Resources */,
 				B7615FC51D9F5BB600CA893E /* special.png in Resources */,
-				B7FF59601E544ED00065A48E /* GoogleService-Info.plist in Resources */,
 				B7EC6D6B1E9E037F0086C37E /* ic-back@3x.png in Resources */,
 				B75DDCBA1D3BF651004A5915 /* witcastlogo.jpg in Resources */,
 				B75844CE1D9D9C250045D926 /* Knob@2x.png in Resources */,
 				B75DDCAA1D3BF651004A5915 /* feed-odd-bg.png in Resources */,
 				B7615F801D9E9CEB00CA893E /* ic-pause@2x.png in Resources */,
 				B7985BF41D919B6D007F3EF8 /* mainEpisode.json in Resources */,
+				B07635051F90949200761146 /* GoogleService-Info.plist in Resources */,
 				B75844731D9D7DCC0045D926 /* Bar@2x.png in Resources */,
 				B7615F901D9ED62D00CA893E /* ic-rewind@3x.png in Resources */,
 				B7615F8F1D9ED62D00CA893E /* ic-rewind@2x.png in Resources */,
@@ -1225,6 +1231,7 @@
 				B75DDCA11D3BF651004A5915 /* bg-menu.png in Resources */,
 				B7615FB01D9F5BB600CA893E /* about.png in Resources */,
 				B744D4DA1D3645770026D9EE /* FeedHeaderTableViewCell.xib in Resources */,
+				B07635041F90949200761146 /* GoogleService-Info-MAIN.plist in Resources */,
 				B7096ECA1D472B55004CEA84 /* OtherViewController.xib in Resources */,
 				B75DDCE21D3CBB62004A5915 /* ItemMainEpHeaderTableViewCell.xib in Resources */,
 				B7615FC81D9F5BB600CA893E /* witcast.png in Resources */,
@@ -1235,6 +1242,7 @@
 				B7C13CCA1DB2A0CC002B8312 /* DonateViewController.xib in Resources */,
 				B75844AC1D9D889D0045D926 /* ic-play-yellow.png in Resources */,
 				B75844A61D9D889D0045D926 /* Cell.png in Resources */,
+				B07635031F90949200761146 /* GoogleService-Info-BETA.plist in Resources */,
 				B75DDCB01D3BF651004A5915 /* MainTableCell.png in Resources */,
 				B75844AD1D9D889D0045D926 /* ic-play-yellow@2x.png in Resources */,
 				B73FFDF01D962DC200ACF32E /* empty-favourite@2x.png in Resources */,
@@ -1316,9 +1324,42 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WiTcast/Pods-WiTcast-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Jukebox/Jukebox.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/WKAwesomeMenu/WKAwesomeMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Whisper/Whisper.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Jukebox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WKAwesomeMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Whisper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1331,13 +1372,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WiTcast-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A8BF87181F36559A0AE4D49E /* [CP] Copy Pods Resources */ = {
