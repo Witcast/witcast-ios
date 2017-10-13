@@ -33,8 +33,8 @@ class PlayerViewController: UIViewController {
     let realm = try! Realm()
     var isPlay = false;
     var lists : Results<NormalEpisode>!
-    internal var titleTab: String = ""
-    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate;
+    private var titleTab: String = ""
+    let appDelegate: AppDelegate = AppDelegate.shared()
     
     override func viewDidLoad() {
         super.viewDidLoad()

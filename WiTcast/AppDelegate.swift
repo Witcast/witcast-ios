@@ -157,3 +157,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JukeboxDelegate {
 
 }
 
+extension AppDelegate {
+    static func shared() -> AppDelegate {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            fatalError()
+        }
+        return appDelegate
+    }
+}
+
