@@ -71,11 +71,6 @@ class PlayerViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-    deinit {
-
-        print("printtttt")
-    }
-    
     func initView(titleTab: String) {
         self.titleTab = titleTab
         preparePageTabBarItem()
