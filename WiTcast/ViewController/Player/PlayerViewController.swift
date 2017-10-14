@@ -87,11 +87,6 @@ class PlayerViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateButton"), object: nil)
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        NotificationCenter.default.removeObserver(self)
-    }
-
     func initView(titleTab: String) {
         self.titleTab = titleTab
         preparePageTabBarItem()
