@@ -100,12 +100,14 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agI-Fb-LKN" customClass="IconButton" customModule="Material">
                                     <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                    <color key="tintColor" red="0.3766380250453949" green="0.48959815502166748" blue="0.5440593957901001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="favouriteButtonAction:" destination="-1" eventType="touchUpInside" id="vpu-tb-YrF"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w34-hj-Zpf" customClass="IconButton" customModule="Material">
                                     <rect key="frame" x="38" y="0.0" width="30" height="34"/>
+                                    <color key="tintColor" red="0.37663802499999999" green="0.48959815499999998" blue="0.54405939579999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="downloadButtonAction:" destination="-1" eventType="touchUpInside" id="3BN-q2-m5r"/>
                                     </connections>

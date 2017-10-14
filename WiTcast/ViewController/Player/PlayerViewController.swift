@@ -29,6 +29,30 @@ class PlayerViewController: UIViewController {
     @IBOutlet var btnPlaylbl: UIButton!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var slider: UISlider!
+    var episodeShow: Int? {
+        get {
+            return valueFromUserDefaultFromKey(key: "episodeShow")
+        }
+        set {
+            saveObjectToUserDefault(key: "episodeShow", value: newValue)
+        }
+    }
+    var episodeNow: Int? {
+        get {
+            return valueFromUserDefaultFromKey(key: "episodeNow")
+        }
+        set {
+            saveObjectToUserDefault(key: "episodeNow", value: newValue)
+        }
+    }
+    var downloadCount: Int? {
+        get {
+            return valueFromUserDefaultFromKey(key: "downloadCount")
+        }
+        set {
+            saveObjectToUserDefault(key: "downloadCount", value: newValue)
+        }
+    }
     
     let realm = try! Realm()
     var isPlay = false;
@@ -74,33 +98,30 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func btnRewind(_ sender: AnyObject) {
-        if (self.isPlay == true) {
-            if let currentTime = self.appDelegate.jukebox.currentItem?.currentTime {
-                self.appDelegate.jukebox.seek(toSecond: Int(Double(currentTime) - 15))
-            }
+        guard let currentTime = self.appDelegate.jukebox.currentItem?.currentTime, self.isPlay else {
+            return
         }
+        self.appDelegate.jukebox.seek(toSecond: Int(Double(currentTime) - 15))
     }
     
     @IBAction func btnForward(_ sender: AnyObject) {
-        if (self.isPlay == true) {
-            if let currentTime = self.appDelegate.jukebox.currentItem?.currentTime {
-                self.appDelegate.jukebox.seek(toSecond: Int(Double(currentTime) + 15))
-            }
+        guard let currentTime = self.appDelegate.jukebox.currentItem?.currentTime, self.isPlay else {
+            return
         }
+        self.appDelegate.jukebox.seek(toSecond: Int(Double(currentTime) + 15))
     }
     
     @IBAction func progressSliderValueChanged() {
-        if (self.isPlay == true) {
-            if let duration = self.appDelegate.jukebox.currentItem?.meta.duration {
-                self.appDelegate.jukebox.seek(toSecond: Int(Double(self.slider.value) * duration))
-            }
+        guard let duration = self.appDelegate.jukebox.currentItem?.meta.duration, self.isPlay else {
+            return
         }
+        self.appDelegate.jukebox.seek(toSecond: Int(Double(self.slider.value) * duration))
     }
     
     @IBAction func btnPlay(_ sender: AnyObject) {
-        var index = 1;
+        let index = episodeShow ?? 1;
         
-        if (self.isPlay == true) {
+        if self.isPlay {
             switch self.appDelegate.jukebox.state {
             case .ready :
                 self.appDelegate.jukebox.play(atIndex: 0)
@@ -111,40 +132,26 @@ class PlayerViewController: UIViewController {
             default:
                 self.appDelegate.jukebox.stop()
             }
-        }
-        else {
+        } else {
             self.appDelegate.jukebox.stop();
-            
-            if (UserDefaults.standard.object(forKey: "episodeShow") as? Int) != nil {
-                index = UserDefaults.standard.object(forKey: "episodeShow") as! Int;
-            }
-            
-            UserDefaults.standard.set(index, forKey: "episodeNow")
-            UserDefaults.standard.synchronize()
+            episodeNow = index
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateButton"), object: nil)
-            self.isPlay = true
-            
-            let itemUrl = self.appDelegate.jukebox.currentItem?.URL
-            if itemUrl != nil {
-                self.appDelegate.jukebox.removeItems(withURL: itemUrl!)
+            if let itemUrl = self.appDelegate.jukebox.currentItem?.URL {
+                self.appDelegate.jukebox.removeItems(withURL: itemUrl)
             }
-            
-            var data: Results<NormalEpisode>!;
-            data = realm.objects(NormalEpisode.self).filter("episodeId = \(index)")
-            let dataLocal = realm.objects(ItemLocal.self).filter("episodeId = \(data[0].episodeId)")
-            if dataLocal.count != 0 {
-                if dataLocal[0].downloadPath != "" {
+            guard let data = realm.objects(NormalEpisode.self).filter("episodeId = \(index)").first,
+                var fileURL = URL(string: data.fileUrl) else {
+                return
+            }
+            if let dataLocal = realm.objects(ItemLocal.self).filter("episodeId = \(data.episodeId)").first, !dataLocal.downloadPath.isEmpty {
                     let documentsDirectoryURL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-                    let destinationUrl = documentsDirectoryURL.appendingPathComponent("\(dataLocal[0].episodeId).mp3")
-                    self.appDelegate.jukebox.append(item: JukeboxItem (URL: destinationUrl, localTitle: data[0].dsc), loadingAssets: true)
-                } else {
-                    self.appDelegate.jukebox.append(item: JukeboxItem (URL: URL(string: data[0].fileUrl)!, localTitle: data[0].dsc), loadingAssets: true)
-                }
-            } else {
-                self.appDelegate.jukebox.append(item: JukeboxItem (URL: URL(string: data[0].fileUrl)!, localTitle: data[0].dsc), loadingAssets: true)
-            }
+                    let destinationUrl = documentsDirectoryURL.appendingPathComponent("\(dataLocal.episodeId).mp3")
+                    fileURL = destinationUrl
 
+            }
+            self.appDelegate.jukebox.append(item: JukeboxItem (URL: fileURL, localTitle: data.dsc), loadingAssets: true)
             self.appDelegate.jukebox.play(atIndex: 0)
+            self.isPlay = true
         }
     }
     
@@ -186,7 +193,8 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func downloadButtonAction(_ sender: Any) {
-        if UserDefaults.standard.integer(forKey: "downloadCount") == 2 {
+        let downloadCount = self.downloadCount ?? 0
+        if downloadCount == 2 {
             let popup = PopupDialog(title: "ขออภัยค่ะ!", message: "ตอนนี้มีไฟล์ที่กำลังโหลดอยู่ 2 ไฟล์ เพื่อความมีเสถียรภาพกรุณาให้ไฟล์ใดไฟล์หนึ่งโหลดเสร็จสิ้นก่อนนะคะ", buttonAlignment: .horizontal, transitionStyle: .zoomIn, gestureDismissal: false) {
             }
             
@@ -197,8 +205,7 @@ class PlayerViewController: UIViewController {
             popup.addButtons([buttonOK])
             self.present(popup, animated: true, completion: nil)
         } else {
-            let downloadNow = UserDefaults.standard.integer(forKey: "downloadCount")
-            UserDefaults.standard.set((downloadNow + 1), forKey: "downloadCount")
+            self.downloadCount = downloadCount + 1
             
             let dataTemp = self.lists[0];
             let dataDownload = realm.objects(ItemLocal.self).filter("episodeId = \(dataTemp.episodeId)")
@@ -278,14 +285,13 @@ class PlayerViewController: UIViewController {
     }
     
     func updateUI(){
+        var imageName = "ic-play"
         if (self.isPlay) {
             UIView.animate(withDuration: 0.3) {
                 self.loadingIndicator.alpha = self.appDelegate.jukebox.state == .loading ? 1 : 0
                 self.btnPlaylbl.alpha = self.appDelegate.jukebox.state == .loading ? 0 : 1
                 self.btnPlaylbl.isEnabled = self.appDelegate.jukebox.state == .loading ? false : true
             }
-
-            let imageName: String
             switch self.appDelegate.jukebox.state {
             case .ready:
                 imageName = "ic-play"
@@ -293,13 +299,10 @@ class PlayerViewController: UIViewController {
                 imageName = "ic-pause"
             case .playing:
                 imageName = "ic-pause"
-            case .paused, .failed:
-                imageName = "ic-play"
+            default: break
             }
-            self.btnPlaylbl.setImage(UIImage(named: imageName), for: UIControlState())
-        } else {
-            self.btnPlaylbl.setImage(UIImage(named: "ic-play"), for: .normal)
         }
+        self.btnPlaylbl.setImage(UIImage(named: imageName), for: .normal)
     }
     
     func timeLabelString(duration: Int) -> String {
@@ -316,66 +319,43 @@ class PlayerViewController: UIViewController {
     
     func loadData() {
         var index = 1;
-        var episodeNow = 1;
-        var episodeShow = 1;
+        let episodeNow = self.episodeNow ?? 1
+        let episodeShow = self.episodeShow ?? 1
+
+        self.isPlay = episodeNow == episodeShow
         
-        if (UserDefaults.standard.object(forKey: "episodeNow") as? Int) != nil {
-            episodeNow = UserDefaults.standard.object(forKey: "episodeNow") as! Int;
-        }
-        
-        if (UserDefaults.standard.object(forKey: "episodeShow") as? Int) != nil {
-            episodeShow = UserDefaults.standard.object(forKey: "episodeShow") as! Int;
-        }
-        
-        if (episodeNow == episodeShow) {
-            self.isPlay = true
-        }
-        
-        if (self.isPlay == true) {
-            index = episodeNow;
-            self.slider.isEnabled = true
-        }
-        else {
-            index = episodeShow;
+        if !self.isPlay {
             self.lblTime.text = "0:00 / 0:00"
             self.btnPlaylbl.setImage(UIImage(named: "ic-play"), for: .normal)
             self.slider.value = 0.00
-            self.slider.isEnabled = false
         }
+        index = self.isPlay ? episodeNow : episodeShow
+        self.slider.isEnabled = self.isPlay
         
         self.lists = realm.objects(NormalEpisode.self).filter("episodeId = \(index)")
         self.lblTitle.text = self.lists.first?.title;
         self.lblDetail.text = self.lists.first?.dsc;
 
-        guard
-            let URLString = self.lists.first?.coverImageUrl,
-            let url = URL(string: URLString) else {
+        guard let URLString = self.lists.first?.coverImageUrl,
+            let url = URL(string: URLString),
+            let dataLocal = realm.objects(ItemLocal.self).filter("episodeId = \(self.lists[0].episodeId)").first else {
             return
         }
         self.imgCover.kf.setImage(with: url)
-        
-        let dataLocal = realm.objects(ItemLocal.self).filter("episodeId = \(self.lists[0].episodeId)")
-        if dataLocal.count > 0 {
-            if dataLocal[0].isFavourite == false {
-                self.favouriteButton.tintColor = Color.blueGrey.base
-            }
-            else {
-                self.favouriteButton.tintColor = Color.red.base
-            }
-            
-            if (dataLocal[0].downloadStatus == "Done") || (dataLocal[0].downloadStatus == "Downloading") {
-                self.downloadButton.tintColor = Color.red.base
-            }
-            else {
-                self.downloadButton.tintColor = Color.blueGrey.base
-            }
-        }
-        else {
-            self.favouriteButton.tintColor = Color.blueGrey.base
-            self.downloadButton.tintColor = Color.blueGrey.base
-        }
+        let isDoneOrDownloading = (dataLocal.downloadStatus == "Done") || (dataLocal.downloadStatus == "Downloading")
+        self.favouriteButton.tintColor = dataLocal.isFavourite ? Color.red.base : Color.blueGrey.base
+        self.downloadButton.tintColor = isDoneOrDownloading ? Color.red.base : Color.blueGrey.base
         
         self.updateUI();
+    }
+
+    private func valueFromUserDefaultFromKey<T>(key: String) -> T? {
+        return UserDefaults.standard.object(forKey: key) as? T
+    }
+
+    private func saveObjectToUserDefault(key: String, value: Any?) {
+        UserDefaults.standard.set(value, forKey: key)
+        UserDefaults.standard.synchronize()
     }
 }
 
